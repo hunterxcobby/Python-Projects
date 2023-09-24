@@ -4,13 +4,13 @@
 
 <p align="center">
 <a href="https://github.com/hunterxcobby/followers"><img title="Followers" src="https://img.shields.io/github/followers/hunterxcobby?label=Followers&style=social"></a>
-<a href="https://github.com/hunterxcobby/alx-low_level_programming/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/hunterxcobby/alx-low_level_programming?&style=social"></a>
-<a href="https://github.com/hunterxcobby/alx-low_level_programming/network/members"><img title="Fork" src="https://img.shields.io/github/forks/hunterxcobby/alx-low_level_programming?style=social"></a>
-<a href="https://github.com/hunterxcobby/alx-low_level_programming/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/hunterxcobby/alx-low_level_programming?label=Watching&style=social"></a>
-<a href="https://github.com/hunterxcobby/alx-low_level_programming/watchers"><img title="Contributor" src="https://img.shields.io/github/contributors/hunterxcobby/alx-low_level_programming?logo=github&style=social"></a>
+<a href="https://github.com/hunterxcobby/Python-Projects/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/hunterxcobby/Python-Projects?&style=social"></a>
+<a href="https://github.com/hunterxcobby/Python-Projects/network/members"><img title="Fork" src="https://img.shields.io/github/forks/hunterxcobby/Python-Projects?style=social"></a>
+<a href="https://github.com/hunterxcobby/Python-Projects/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/hunterxcobby/Python-Projects?label=Watching&style=social"></a>
+<a href="https://github.com/hunterxcobby/Python-Projects/watchers"><img title="Contributor" src="https://img.shields.io/github/contributors/hunterxcobby/Python-Projects?logo=github&style=social"></a>
 </p>
 <p align="center">
-<a href="https://github.com/hunterxcobby/alx-low_level_programming"><img src="https://img.shields.io/github/repo-size/hunterxcobby/alx-low_level_programming?label=Repo%20size&style=flat"></a>
+<a href="https://github.com/hunterxcobby/Python-Projects"><img src="https://img.shields.io/github/repo-size/hunterxcobby/Python-Projects?label=Repo%20size&style=flat"></a>
 </p>
 
 
