@@ -56,23 +56,20 @@ To start programming in Python, you'll need to set up your environment. Follow t
 
 1. **Python Interpreter**: Install the latest version of Python from the [official website](https://www.python.org/downloads/). Make sure to check the option that adds Python to your system's PATH during installation.
 
-### Choosing an Editor
-
+2. **Choosing an Editor**:
 Next, choose an editor or Integrated Development Environment (IDE) to write and run your Python code. Here are a few popular options:
 
 - **Visual Studio Code**: Download and install [VSCode](https://code.visualstudio.com/). It has excellent support for Python and provides a variety of extensions.
 
 - **PyCharm**: JetBrains' [PyCharm](https://www.jetbrains.com/pycharm/) is a powerful IDE designed specifically for Python development.
 
-### Writing Your First Python Program
-
+3. **Writing Your First Python Program**:
 Open your chosen editor and create a new file with a `.py` extension (e.g., `0-test.py`). Then, 
 you can refer to [0-test.py](https://github.com/hunterxcobby/Python-Projects/blob/main/lessons/exercises/0-test.py) as a guide to your first program.
 
-Save the file and open a terminal or command prompt. Navigate to the directory where you saved `0-test.py` and type `python3 hello.py` to run the program. You should see `Hello, World, let us do great things together.` printed in the terminal.
+Save the file and open a terminal or command prompt. Navigate to the directory where you saved `0-test.py` and type `python3 0-test.py` to run the program. You should see `Hello, World, let us do great things together.` printed in the terminal.
 
-### Additional Resources
-
+4. **Additional Resources**:
 For more detailed information and tutorials, consider referring to the official [Python documentation](https://docs.python.org/3/). It's an excellent resource for both beginners and experienced developers.
 
 ## Usage
