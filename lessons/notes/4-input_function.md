@@ -25,7 +25,7 @@ print ("Hello" + " "+ input("What is your name?"))
 1. Save the code in a Python file (e.g., [4-input_function.py](https://github.com/hunterxcobby/Python-Projects/blob/main/lessons/exercises/4-input_function.py).
 2. Open a terminal or command prompt.
 3. Navigate to the directory where the file is saved.
-4. Run the Python script using the command `Python3 4-input_function.py`.
+4. Run the Python script using the command `python3 4-input_function.py`.
 5. The program will prompt you to enter your name. After entering your name and pressing Enter, it will print a personalized greeting.
 
 Feel free to modify and experiment with this code to further explore user inputs in Python!
