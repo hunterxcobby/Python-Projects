@@ -5,4 +5,4 @@
 #That line of code is easily replaced with the output but it works behind the scenes
 #when you uncomment it, you realise the prompt appears twice
 
-print ("Hello" + " "+ input("What is your name?"))
+print ("Hello" + " "+ input("What is your name?" + " "))
