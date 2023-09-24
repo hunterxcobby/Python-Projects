@@ -2,6 +2,8 @@
 
 In this lesson, you learned about taking user inputs in Python. The following code demonstrates how to prompt the user for their name and then prints a greeting:
 
+**File Name**: [4-input_function.py](https://github.com/hunterxcobby/Python-Projects/blob/main/lessons/exercises/4-input_function.py).
+
 ## Lesson Overview
 
 - This lesson covers the concept of taking user inputs in Python.
