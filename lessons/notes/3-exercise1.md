@@ -2,6 +2,7 @@
 
 Exercise file name: [3-exercise1.py](https://github.com/hunterxcobby/Python-Projects/blob/main/lessons/exercises/3-exercise1.py)
 
+
 1. This is a comment in Python.
 ```
 #It is not executed by the program, but serves as a note for humans to understand the code.
@@ -23,6 +24,7 @@ print('print("what to print")')
 ```
 
 #### NB: The code execution will start from the top and proceed line by line.
+
 
 ## Summary
 This Python exercise is a simple introduction to using the print() function, which is used to display output in Python. It prints three different strings to the console, demonstrating how to use the print() function with single and double quotes.
