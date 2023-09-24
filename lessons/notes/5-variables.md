@@ -2,6 +2,20 @@
 
 Checkout the source code file : [5-variables](https://github.com/hunterxcobby/Python-Projects/blob/main/lessons/exercises/5-variables.py)
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Rules to Follow](#rules-to-follow)
+- [Declaring Variables](#declaring-variables)
+- [Data Types](#data-types)
+- [Naming Conventions](#naming-conventions)
+- [Assigning Values](#assigning-values)
+- [Printing Variables](#printing-variables)
+- [Comments](#comments)
+- [Constants](#constants)
+- [Illustration](#illustration)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 In programming, a variable is a way to store and manage data. Think of it as a labeled box where you can keep different types of information. In Python, you can name a variable almost anything you want, as long as it follows a few rules. These are some rules to follow
@@ -105,4 +119,3 @@ Open the exercise file : [5-variables.py](https://github.com/hunterxcobby/Python
 Variables are fundamental in Python and programming in general. They allow you to store and manipulate data, making your programs dynamic and powerful. As you continue learning, you'll discover more complex uses for variables, but this guide should give you a solid start.
 
 Remember, practice is key! Experiment with variables and see how they behave in different situations.
-```
