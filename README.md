@@ -38,17 +38,12 @@ This repository contains some basic projects, lessons and notes to guide one get
 
 ## Features
 
-These are some basic commands that help the learner navigate his way around the utilization of this repository in SHELL.
+These are the various directories
 
- 
-
-- cd - change directory 
-- ls - list current files
-- rm - delete a file
-- rmdir - delete empty directories
-- rm -r - delete a directory with contents
-- cp - copy
-- mv - to move or rename
+- **[Lessons](https://github.com/hunterxcobby/Python-Projects/tree/main/lessons)**
+   - **[Exercises](https://github.com/hunterxcobby/Python-Projects/tree/main/lessons/exercises)**
+   -  **[Notes](https://github.com/hunterxcobby/Python-Projects/tree/main/lessons/notes)**
+- **[Projects](https://github.com/hunterxcobby/Python-Projects/tree/main/my_projects)**
 
 ## Installation
 
