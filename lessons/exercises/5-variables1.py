@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 #Asks user for name and saves it in a variable
-name = input("What is your name?")
+name = input("What is your name? ")
 
-#prints users name to screen 
+#prints users name to screen
 print(name)
 
 #save the string length of name and save it in a variable
