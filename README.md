@@ -64,7 +64,10 @@ you can refer to [0-test.py](https://github.com/hunterxcobby/Python-Projects/blo
 
 Save the file and open a terminal or command prompt. Navigate to the directory where you saved `0-test.py` and type `python3 0-test.py` to run the program. You should see `Hello, World, let us do great things together.` printed in the terminal.
 
-4. **Additional Resources**:
+4. **Documentation**:
+[Pycodestyle -- Style Guide for Python Code](https://pypi.org/project/pycodestyle/)
+
+6. **Additional Resources**:
 For more detailed information and tutorials, consider referring to the official [Python documentation](https://docs.python.org/3/). It's an excellent resource for both beginners and experienced developers.
 
 ## Usage
