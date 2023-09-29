@@ -1,4 +1,3 @@
----
 
 ## Introduction
 
@@ -75,5 +74,3 @@ print(value1, value2, ..., sep=" ", end="\n")
 ```
 
 These basics provide a solid foundation for your Python journey. Feel free to explore further and practice regularly to become more comfortable with the language.
-
----
