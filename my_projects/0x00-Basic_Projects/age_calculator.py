@@ -13,4 +13,4 @@ print("Your date of birth is:", end=" ")
 print(day_of_birth, month_of_birth, year_of_birth, sep="-")
 
 # Calculate the age
-age = current_year - year_of_birth
+age = int(current_year) - year_of_birth
