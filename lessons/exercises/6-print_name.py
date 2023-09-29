@@ -4,10 +4,15 @@ first_name = "Cobby"
 surname = "Sefah"
 
 # display my full name
-print(first_name, surname, end=" ")
 
 # print multiple things
+# print(values, ..., end= "\n")
+print(first_name, surname, end=" ")
 print("comes from", end=" ")
 print("Ghana", end=" ")
 print("and stays in", end=" ")
-print("Accra.", end=" ")
+print("Accra.", end="\n")
+
+# print(values, ..., sep= " ")
+print(first_name, surname, sep=" ")
+ 
