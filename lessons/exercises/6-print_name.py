@@ -16,6 +16,6 @@ print("Accra.", end="\n")
 # print(values, ..., sep= " ")
 print(first_name, surname, sep=" ")
  
-# always remember your commas
+# always remember your comma
 # all positional arguments come 
 # before keyword arguments
