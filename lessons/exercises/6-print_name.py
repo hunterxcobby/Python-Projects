@@ -1,17 +1,13 @@
 #!/usr/bin/python3
 
-print("Cobby")
+first_name = "Cobby"
+surname = "Sefah"
 
-print('CObby Sefah Solomon') 
+# display my full name
+print(first_name, surname)
 
-print("2")
-
-print(4)
-
-print(2 + 4)
-
-print("2+4")
-
-name = "Cobby Sefah Solomon"
-
-print(name)
+# print multiple things
+print("comes from", end="\n")
+print("Ghana", end="\n")
+print("stays in", end="\n")
+print("Accra", end="\n")
