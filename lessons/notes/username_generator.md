@@ -127,7 +127,7 @@ I hope this breakdown helps you understand the code I used in the project. Conta
 - Think about other possible variations for usernames. For example, you might want to use the entire first name, only the first character, or a mix of both.
 
 ### Step 6: Control the Number of Usernames
-- Decide on a limit for the number of usernames you want to generate. You can use a loop and an `if` statement to ensure you generate a reasonable number.
+- Decide on a limit for the number of usernames you want to generate. You can use a loop and an `if` statement to ensure you generate a reasonable number but it can be any number depending on personal preferences.
 
 ### Step 7: Return the Collection
 - At the end of the function, return the collection of generated usernames.
