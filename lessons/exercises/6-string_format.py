@@ -21,7 +21,7 @@ print(details)
 
 print()
 # Using indices in the new formatting style
-details = "Your name is {1} {0} and you are {1} years old".format(fname, surname,age)
+details = "Your name is {1} {0} and you are {2} years old".format(fname, surname,age)
 print(details)
 
 print()
@@ -33,3 +33,5 @@ print()
 # Using the f-string formatting style
 details = f"Your name is {fname} {surname} and you are {age} years old"
 print(details)
+# You can use the f-string to do a lot like operations
+print(f"we have {3 + 3} examples so far")
