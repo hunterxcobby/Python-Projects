@@ -1,7 +1,7 @@
 
 ## Table of Contents
 
-1. [Explanation of The Codes](#explanation-of-the-codes)
+1. [Explanation Of The Codes](#explanation-of-the-codes)
 2. [How to Generate Usernames](#how-to-generate-usernames)
     - [Step 1: Define a Function](#step-1-define-a-function)
     - [Step 2: Set Up a Collection](#step-2-set-up-a-collection)
