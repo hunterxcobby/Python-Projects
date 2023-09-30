@@ -18,3 +18,8 @@ print()
 # Using specifiers in the new formatting style
 details = "Your name is {:s} {:s} and you are {:d} years old".format(fname, surname,age)
 print(details)
+
+print()
+# Using their indices
+details = "Your name is {1} {0} and you are {2} years old".format(fname, surname,age)
+print(details)
