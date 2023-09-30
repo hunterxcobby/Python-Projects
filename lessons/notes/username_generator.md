@@ -1,4 +1,23 @@
-## Explanation of my codes 
+
+## Table of Contents
+
+1. [Explanation of The Codes](#explanation-of-the-codes)
+2. [How to Generate Usernames](#how-to-generate-usernames)
+    - [Step 1: Define a Function](#step-1-define-a-function)
+    - [Step 2: Set Up a Collection](#step-2-set-up-a-collection)
+    - [Step 3: Generate Basic Usernames](#step-3-generate-basic-usernames)
+    - [Step 4: Add Unique Usernames to the Collection](#step-4-add-unique-usernames-to-the-collection)
+    - [Step 5: Consider Variations](#step-5-consider-variations)
+    - [Step 6: Control the Number of Usernames](#step-6-control-the-number-of-usernames)
+    - [Step 7: Return the Collection](#step-7-return-the-collection)
+    - [Step 8: Get User Input](#step-8-get-user-input)
+    - [Step 9: Call the Function](#step-9-call-the-function)
+    - [Step 10: Display Usernames](#step-10-display-usernames)
+    - [Step 11: Handle Missing Information](#step-11-handle-missing-information)
+    - [Step 12: Test Your Code](#step-12-test-your-code)
+    - [Sample Code](#sample-code)
+
+## Explanation of The Codes
 
 ```python
 #!/usr/bin/python3
@@ -88,49 +107,47 @@ else:
 
 I hope this breakdown helps you understand the code I used in the project. Contact me if you have any further questions!
 
-And these are the steps you can follow to create your own
+---
 
-I'll guide you through the process of writing a similar code step by step:
+## How to Generate Usernames
 
-### Generating Usernames
+### Step 1: Define a Function
+- Start by defining a function named `generate_usernames`.
 
-#### Step 1: Define a Function
-- Start by defining a function that will generate usernames. You can name it something like `generate_usernames`.
-
-#### Step 2: Set Up a Collection
+### Step 2: Set Up a Collection
 - Create a collection to store the generated usernames. You can use a set, which ensures uniqueness.
 
-#### Step 3: Generate Basic Usernames
+### Step 3: Generate Basic Usernames
 - Begin by generating basic usernames based on the provided first name and surname. For example, you can create usernames using combinations of the first three characters of each name.
 
-#### Step 4: Add Unique Usernames to the Collection
+### Step 4: Add Unique Usernames to the Collection
 - Add each generated username to the collection. Be sure to format it with a prefix (like `@`) and separate the first name and surname with an underscore.
 
-#### Step 5: Consider Variations
+### Step 5: Consider Variations
 - Think about other possible variations for usernames. For example, you might want to use the entire first name, only the first character, or a mix of both.
 
-#### Step 6: Control the Number of Usernames
+### Step 6: Control the Number of Usernames
 - Decide on a limit for the number of usernames you want to generate. You can use a loop and an `if` statement to ensure you generate a reasonable number.
 
-#### Step 7: Return the Collection
+### Step 7: Return the Collection
 - At the end of the function, return the collection of generated usernames.
 
-#### Step 8: Get User Input
+### Step 8: Get User Input
 - Ask the user for their first name and surname using the `input` function. Store the inputs in variables.
 
-#### Step 9: Call the Function
+### Step 9: Call the Function
 - Call the `generate_usernames` function with the provided first name and surname.
 
-#### Step 10: Display Usernames
+### Step 10: Display Usernames
 - Print out the generated usernames for the user to see.
 
-#### Step 11: Handle Missing Information
+### Step 11: Handle Missing Information
 - Add checks to make sure the user provides both their first name and surname. If not, prompt them to provide the missing information.
 
-#### Step 12: Test Your Code
+### Step 12: Test Your Code
 - Run your code with different inputs to make sure it's working as expected.
 
-#### Sample Code:
+### Sample Code:
 
 ```python
 def generate_usernames(first_name, surname):
