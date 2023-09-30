@@ -32,7 +32,7 @@ def generate_usernames(first_name, surname):
 ```python
     usernames = set()
 ```
-- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username suggestions.
+- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username options.
 
 ```python
     usernames.add(f"@{first_name[:3].lower()}_{surname[:3].lower()}")
