@@ -21,5 +21,10 @@ print(details)
 
 print()
 # Using their indices
-details = "Your name is {1} {0} and you are {2} years old".format(fname, surname,age)
+details = "Your name is {1} {0} and you are {1} years old".format(fname, surname,age)
+print(details)
+
+print()
+# Using keywords
+details = "Your name is {fn} {ln} and you are {ag} years old".format(fn = fname, ln = surname, ag = age)
 print(details)
