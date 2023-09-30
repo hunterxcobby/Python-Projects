@@ -149,6 +149,8 @@ I hope this breakdown helps you understand the code I used in the project. Conta
 
 ### Sample Code:
 
+You can use this code as a sample code to start writing your own 
+
 ```python
 def generate_usernames(first_name, surname):
     usernames = set()
