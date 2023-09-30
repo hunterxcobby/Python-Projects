@@ -69,7 +69,7 @@ def generate_usernames(first_name, surname):
             if len(usernames) >= 15:
                 return usernames
 ```
-- If the number of generated usernames reaches or exceeds 15, the function returns the set of usernames. This is done to ensure we don't generate too many usernames.
+- If the number of generated usernames reaches or exceeds 15, the function returns the set of usernames. This is done to ensure we don't generate too many usernames. Moat users might find a long list irrtating.
 
 ```python
     return usernames
