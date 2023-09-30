@@ -2,8 +2,7 @@
 ```python
 #!/usr/bin/python3
 ```
-- This is known as a **shebang line**. It indicates that this script should be executed using the `python3` interpreter located at `/usr/bin/python3`. This is used in Unix-like systems to specify which interpreter should be used to execute the script.
-
+- This is known as a **shebang line**. It indicates that this script should be executed using the `python3` interpreter located at `/usr/bin/python3`. This is used in Unix-like systems to specify which interpreter should be used to execute the scri
 ```python
 def generate_usernames(first_name, surname):
 ```
