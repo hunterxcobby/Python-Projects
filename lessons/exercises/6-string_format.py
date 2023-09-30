@@ -5,4 +5,5 @@ surname = input("Surname: ")
 age = int(input("Age: "))
 
 # Display details
-print("Your name is %s %s and you are %d years old" %(fname, surname,age))
+message = "Your name is %s %s and you are %d years old" %(fname, surname,age)
+print(message)
