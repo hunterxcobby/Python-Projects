@@ -32,27 +32,27 @@ def generate_usernames(first_name, surname):
 ```python
     usernames = set()
 ```
-- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username options.
+- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username suggestions.
 
 ```python
     usernames.add(f"@{first_name[:3].lower()}_{surname[:3].lower()}")
 ```
-- This adds the first username option to the set. It combines the first three characters of `first_name` and `surname` with an underscore in between, converts them to lowercase, and prepends `@`.
+- This adds the first username suggestion to the set. It combines the first three characters of `first_name` and `surname` with an underscore in between, converts them to lowercase, and prepends `@`.
 
 ```python
     usernames.add(f"@{first_name.lower()}_{surname.lower()}")
 ```
-- This adds a second username option to the set. It uses the full `first_name` and `surname`, converted to lowercase, separated by an underscore, and prepends `@`.
+- This adds a second username suggestion to the set. It uses the full `first_name` and `surname`, converted to lowercase, separated by an underscore, and prepends `@`.
 
 ```python
     usernames.add(f"@{first_name[0].lower()}_{surname.lower()}")
 ```
-- This adds a third username option. It uses the first character of `first_name`, converts it to lowercase, and combines it with the full `surname`, also in lowercase, separated by an underscore, and prepends `@`.
+- This adds a third username suggestion. It uses the first character of `first_name`, converts it to lowercase, and combines it with the full `surname`, also in lowercase, separated by an underscore, and prepends `@`.
 
 ```python
     usernames.add(f"@{first_name.lower()}_{surname[:3].lower()}")
 ```
-- This adds a fourth username option. It uses the full `first_name` in lowercase, combines it with the first three characters of `surname` in lowercase, separated by an underscore, and prepends `@`.
+- This adds a fourth username suggestion. It uses the full `first_name` in lowercase, combines it with the first three characters of `surname` in lowercase, separated by an underscore, and prepends `@`.
 
 ```python
     for i in range(1, len(first_name)):
@@ -63,7 +63,7 @@ def generate_usernames(first_name, surname):
 ```python
             usernames.add(f"@{first_name[:i].lower()}_{surname[:j].lower()}")
 ```
-- Inside the loops, this line generates additional username options using slices of `first_name` and `surname`, converting them to lowercase, and combining them with an underscore in between, all prepended with `@`.
+- Inside the loops, this line generates additional username suggestions using slices of `first_name` and `surname`, converting them to lowercase, and combining them with an underscore in between, all prepended with `@`.
 
 ```python
             if len(usernames) >= 15:
@@ -93,11 +93,11 @@ if first_name and surname:
 - If both names are provided, this line calls the `generate_usernames` function with the provided names, and assigns the resulting set of usernames to the variable `usernames`.
 
 ```python
-    print(f"Your username options are:")
+    print(f"Your username suggestions are:")
     for username in usernames:
         print(username)
 ```
-- This block of code prints a message indicating that username options are about to be displayed, and then iterates over each username in the `usernames` set, printing them one by one.
+- This block of code prints a message indicating that username suggestions are about to be displayed, and then iterates over each username in the `usernames` set, printing them one by one.
 
 ```python
 else:
@@ -163,7 +163,7 @@ surname = input("Surname: ")
 if first_name and surname:
     usernames = generate_usernames(first_name, surname)
     if len(usernames) > 0:
-        print(f"Your username options are:")
+        print(f"Your username suggestions are:")
         for username in usernames:
             print(username)
     else:
