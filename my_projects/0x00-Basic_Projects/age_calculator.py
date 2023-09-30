@@ -19,4 +19,4 @@ print(day_of_birth, month_of_birth, year_of_birth, sep="-")
 age = current_year - int(year_of_birth)
 
 # Display age
-print("You are", age, "years old.")
+print("You are ", age, "years old.")
