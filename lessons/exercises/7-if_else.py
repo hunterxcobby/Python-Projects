@@ -48,3 +48,13 @@ if b > a:
   print("b is greater than a")
 else:
   print("b is not greater than a")
+
+
+# One line if statement:
+if a > b: print("a is greater than b")
+
+# One line if else statement:
+a = 2
+b = 330
+print("A") if a > b else print("B")
+
