@@ -1,7 +1,7 @@
 
 ## Table of Contents
 
-1. [Explanation of The Codes](#explanation-of-the-codes)
+1. [Explanation Of The Codes](#explanation-of-the-codes)
 2. [How to Generate Usernames](#how-to-generate-usernames)
     - [Step 1: Define a Function](#step-1-define-a-function)
     - [Step 2: Set Up a Collection](#step-2-set-up-a-collection)
@@ -32,7 +32,7 @@ def generate_usernames(first_name, surname):
 ```python
     usernames = set()
 ```
-- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username suggestions.
+- This initializes an empty set called `usernames`. A set is a collection of unique elements, and it's used here to store unique username options.
 
 ```python
     usernames.add(f"@{first_name[:3].lower()}_{surname[:3].lower()}")
@@ -69,7 +69,7 @@ def generate_usernames(first_name, surname):
             if len(usernames) >= 15:
                 return usernames
 ```
-- If the number of generated usernames reaches or exceeds 15, the function returns the set of usernames. This is done to ensure we don't generate too many usernames.
+- If the number of generated usernames reaches or exceeds 15, the function returns the set of usernames. This is done to ensure we don't generate too many usernames. Moat users might find a long list irrtating.
 
 ```python
     return usernames
@@ -127,7 +127,7 @@ I hope this breakdown helps you understand the code I used in the project. Conta
 - Think about other possible variations for usernames. For example, you might want to use the entire first name, only the first character, or a mix of both.
 
 ### Step 6: Control the Number of Usernames
-- Decide on a limit for the number of usernames you want to generate. You can use a loop and an `if` statement to ensure you generate a reasonable number.
+- Decide on a limit for the number of usernames you want to generate. You can use a loop and an `if` statement to ensure you generate a reasonable number but it can be any number depending on personal preferences.
 
 ### Step 7: Return the Collection
 - At the end of the function, return the collection of generated usernames.
@@ -148,6 +148,8 @@ I hope this breakdown helps you understand the code I used in the project. Conta
 - Run your code with different inputs to make sure it's working as expected.
 
 ### Sample Code:
+
+You can use this code as a sample code to start writing your own 
 
 ```python
 def generate_usernames(first_name, surname):
