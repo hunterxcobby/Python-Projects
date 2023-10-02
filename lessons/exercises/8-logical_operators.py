@@ -15,3 +15,9 @@ b = 300
 c = 50
 if a > b or a > c:
     print("At least one of the conditons is true")
+
+# Test if a is NOT greater than b:
+a = 33
+b = 200
+if not a > b:
+    print("A is not greater than B")
