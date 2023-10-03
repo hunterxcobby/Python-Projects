@@ -7,6 +7,8 @@ counter = 1 # Initialization
 while (counter <= 10): # condition
     """WIll only execute if the condition is true"""
     print(counter)
+    if (counter == 4):
+        print("four")
     counter = counter + 1 # increment/decrement
 
 # the increment depends on the condtion you want to provide
