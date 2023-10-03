@@ -28,7 +28,7 @@ for i in range(5):
 name = input("Name:")
 
 for f in name:
-    if (f == "c"):
+    if (f.lower() == "c"):
         print(f)
         break
 else:
