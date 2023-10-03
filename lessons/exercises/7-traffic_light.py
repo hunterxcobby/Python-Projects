@@ -3,7 +3,9 @@
 """Give us directions based on traffic rules"""
 
 # Ask for colour
-colour = input("What is the colour of the light? ")
+colour_input = input("What is the colour of the light? ")
+
+colour = colour_input.lower()
 
 if (colour == "red"):
     print("STOP !!!")
