@@ -22,3 +22,16 @@ else:
 
 for i in range(5):
     print(i)
+
+# finding items with the for loop
+
+name = input("Name:")
+
+for f in name:
+    if (f == "c"):
+        print(f)
+        break
+else:
+    print("Couldn't find what you were looking for.")
+
+    
