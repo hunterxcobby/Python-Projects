@@ -8,5 +8,11 @@ import platform
 x = platform.system() #operating system
 print(x)
 
-x = dir(platform)
+x = dir(platform) # list all the function names (or variable names) in a module.
 print(x) 
+    pass
+
+import mymodules
+
+x = dir(mymodules)
+print(x)
