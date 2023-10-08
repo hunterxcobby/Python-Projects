@@ -21,7 +21,19 @@ nums.insert(4, 25)
 print(nums)
 
 # insert at an index that does not exist
-nums.insert(25, 100)
+nums.insert(25, 18)
+print(nums)
+
+# insert at the beiginning
+nums.insert(0, 18)
+print(nums)
+
+# sort and maintain
+nums.sort()
+print(nums)
+
+# reverse with sort
+nums.sort(reverse=True)
 print(nums)
 
 # for more
