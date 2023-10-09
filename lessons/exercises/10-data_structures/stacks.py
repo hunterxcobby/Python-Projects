@@ -2,7 +2,7 @@
 
 '''
    Using lists as stacks
-   A stack is a data structure that follows the LIFO principal
+   A stack is a data structure that follows the LIFO principle
    that means last in, first out.
    we can use lists to implemet that
 '''
