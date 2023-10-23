@@ -8,6 +8,10 @@
 # We can write a program to handle some of these exeptions
 # Using the try except statement
 
+"""This pattern of using try and except allows the program to gracefully 
+handle errors without crashing. It's a way to control the flow of execution
+in the presence of potential errors."""
+
 while True:
     try:
         int(input("Please enter a number: "))
