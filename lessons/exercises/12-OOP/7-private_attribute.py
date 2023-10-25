@@ -14,3 +14,12 @@ class Car:
 
 my_car = Car("Toyota", "Camry")
 # print(my_car.__make) # This will cause an error (AttributeError)
+
+class Car:
+    def __init__(self, make, model):
+        self.__make = make   # Private attribute
+        self.__model = model # Private attribute
+
+my_car = Car("Toyota", "Camry")
+print(my_car._Car__make)   # Accessing private attribute using name mangling
+print(my_car._Car__model)
