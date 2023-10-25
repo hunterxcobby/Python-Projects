@@ -6,6 +6,25 @@ or class. This unit restricts access to some of its components,
 providing a level of security for the data.
  It ensures that data is accessed and modified in a controlled manner."""
 
+class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
+            print("Insufficient funds")
+
+account = BankAccount(1000)
+account.deposit(500)
+account.withdraw(200)
+
+
+
 class Student:
     def __init__(self, name, age):
         self.name = name        # Public attribute
@@ -32,3 +51,4 @@ Flexibility and Modifiability: The internal representation of an object can be c
     without affecting the external code that uses it. This is known as "information hiding."
 Code Organization: It helps in organizing code by grouping related data and behavior together
     in a class."""
+
