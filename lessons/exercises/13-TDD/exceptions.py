@@ -10,10 +10,8 @@ def divide(x, y):
 
     >>> divide(10, 0)
     Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-        File "exceptions.py", line 6, in divide
-            return x / y
-        ZeroDivisionError: division by zero
+        ...
+    ZeroDivisionError: division by zero
     """
     return x / y
 
