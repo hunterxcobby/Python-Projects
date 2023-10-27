@@ -37,7 +37,7 @@ where you saved the Python file.
 Run doctest:
 In the terminal, run the following command:
 """
-'''python -m doctest -v math_operations.py'''
+'''python3 -m doctest -v 1-math_operations.py'''
 
 """Here's what this command does:
 
