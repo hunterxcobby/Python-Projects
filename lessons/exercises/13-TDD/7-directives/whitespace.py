@@ -9,7 +9,10 @@
 
 '''
 So in this example, you will realize the fist test fails because it contains 
-whitespaces and we did not add the directives to it'''
+whitespaces and we did not add the directives to it
+The +NORMALIZE_WHITESPACE directive tells doctest to ignore extra spaces
+ and consider them as equivalent.
+'''
 
 if __name__ == '__main__':
     import doctest
