@@ -11,7 +11,7 @@ class Student:
     def dislayPrivateData(self):
         print(f"My name is {self.name}, I am {self.__age} years old and on rollno {self._rollno} from student class")
 
-class Branch(Student):
+class Branch(Student): # we use this class for protected data
     def show(self):
         print(f"My rollno is {self._rollno}")
 
