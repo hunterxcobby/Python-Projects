@@ -1,22 +1,36 @@
 #!/usr/bin/python3
 
-# We create a class
-class Humans: #Super||Base||Parent class
+# Define a class named Humans
+class Humans: #Base || Super || Child Class
 
-    # We give this class some methods
+    # Define a method named eat within the Humans class
     def eat(self):
         print("I can eat")
     
+    # Define a method named work within the Humans class
     def work(self):
         print("I can work")
-    
-class males(Humans): # Sub||Derived||Child class
-    def drive(self):
-        print("I can drive") # Its own method
-    def work(self):
-        print("I can work very hard")# This is called overriding
 
+# Define a class named males that inherits from Humans
+class males(Humans): #Derived || Sub || Child Class
+
+    # Define a method named drive within the males class
+    def drive(self):
+        print("I can drive")
+    
+    # Override the work method from the parent class Humans
+    def work(self):
+        super().work()  # Call the work method from the parent class
+        print("I can work very hard") # override the parents implementation
+
+# Create an instance of the males class named cobby
 cobby = males()
-cobby.eat() # Inherit from the parent method
-cobby.drive() #its own method
-cobby.work() # override the parents method
+
+# Call the eat method for the instance cobby
+cobby.eat() 
+
+# Call the drive method for the instance cobby
+cobby.drive()
+
+# Call the work method for the instance cobby
+cobby.work()
