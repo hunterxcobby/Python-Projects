@@ -5,7 +5,8 @@ import json
 file = "user.json"
 
 with open(file, "r") as json_file:
-    data = json.load(json_file)
+    data = json.load(json_file)# this is where the magic starts
+
     print(data["name"])
     name = data["name"]
     age = data['Age']
