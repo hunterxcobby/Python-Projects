@@ -1,0 +1,24 @@
+{
+    "profile": [
+        {
+            "name": "Cobby",
+            "age": 27,
+            "profession": "student"
+        },
+        {
+            "name": "Kelvin",
+            "age": 19,
+            "profession": "student"
+        },
+        {
+            "name": "Jasper",
+            "age": 99,
+            "profession": "student"
+        },
+        {
+            "name": "Sena",
+            "age": 26,
+            "profession": "student"
+        }
+    ]
+}
