@@ -1,0 +1,13 @@
+{
+    "name": "Cobby Sefah Solomon",
+    "Age": 21,
+    "isprogrammer": true,
+    "Hobbies" :["Coding", "Gaming", "Animating"],
+    "Friends": [{
+        "name": "Kelvin Asare Bosompem",
+        "Age": 20,
+        "isprogrammer": false,
+        "Hobbies" :["Dancing", "Gaming", null],
+        "Friends": ["Cobby", "Jasper", "Sena"]
+    }]
+}
