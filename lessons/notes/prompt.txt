@@ -1,0 +1,8 @@
+So I ma learning big o notation as a total beginner and i want you to guide me through step by step of all i need to know about it as a total beginner explaining the concept in depths but to as a new programmer and basinng on this learning objective i give you 
+this mini syllables you are about to generate will be based on these two objectives 
+
+What is the Big O notation, and how to evaluate the time complexity of an algorithm
+
+since it might entail a lot you will be generating per chapters and wait for a next prompt from me before moving on to the next chapter 
+
+also so even before we move on to the next chapter i want you to evaluate my progress with a well organized quiz that asks me a question and if i answer it moves to the next one till i tell you that i am good to go now 
