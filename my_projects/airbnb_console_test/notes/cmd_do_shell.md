@@ -82,5 +82,3 @@ running shell command: pwd
 Remember to use shell commands carefully, especially if they involve external inputs, to avoid security risks.
 
 In the context of your Airbnb project, you could extend the `do_shell` command to perform tasks like database backups, environment checks, or any other administrative tasks necessary for the smooth operation of your application.
-
-Feel free to integrate these shell command functionalities into your Airbnb console to enhance its versatility and make it more convenient for managing various aspects of your project. 
