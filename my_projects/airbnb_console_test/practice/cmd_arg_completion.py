@@ -12,6 +12,8 @@ import cmd
 
 class HelloWorld(cmd.Cmd):
 
+    prompt = "input$ "
+
     FRIENDS = ['Alice', 'Adam', 'Barbara', 'Bob']
 
     def do_greet(self, person):
