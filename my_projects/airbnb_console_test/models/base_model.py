@@ -36,15 +36,13 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def to_dict(self) -> dict:
-        """
-        Returns a dictionary of all keys/values of __dict__ of the instance.
-        """
-        result = {key: value for key, value in self.__dict__.items() if key != 'name' and key != 'my_number'}
+        """Return a dictionary of instance attributes."""
+        excluded = ['name', 'my_number']
+        result = {k: v for k, v in self.__dict__.items() if k not in excluded}
         result['__class__'] = self.__class__.__name__
 
-        for key, value in result.items():
-            if isinstance(value, datetime):
-                result[key] = value.isoformat()
+        for k, v in result.items():
+            if isinstance(v, datetime):
+                result[k] = v.isoformat()
 
         return result
-    
