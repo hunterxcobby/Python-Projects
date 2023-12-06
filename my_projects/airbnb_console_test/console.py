@@ -6,6 +6,7 @@ for building line-oriented command interpreters
 import cmd
 import sys
 
+
 class MyConsole(cmd.Cmd):
     prompt = "(hbnb) "
 
@@ -23,16 +24,18 @@ class MyConsole(cmd.Cmd):
 
     def help_quit(self):
         print("Command to quit the program.")
-    
+
     def default(self, line):
         """
         Handle unrecognized commands.
         """
         print(f"Unrecognized command: {line}. Type 'help' for assistance.")
 
+
 """Non-interactive mode.
 To run our console in non-interactive mode
 """
+
 
 def run_console():
     console = MyConsole()
@@ -45,6 +48,7 @@ def run_console():
     else:
         # Run the console interactively
         console.cmdloop()
+
 
 if __name__ == '__main__':
     run_console()
