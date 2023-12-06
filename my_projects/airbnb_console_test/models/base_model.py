@@ -27,8 +27,6 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             models.storage.new(self)
-            
-
 
     def __str__(self) -> str:
         """Return a string representation of the instance."""
@@ -39,7 +37,6 @@ class BaseModel:
         """Update the updated_at attribute and save the instance."""
         self.updated_at = datetime.now()
         models.storage.save()
-
 
     def to_dict(self) -> dict:
         """Return a dictionary of instance attributes."""
