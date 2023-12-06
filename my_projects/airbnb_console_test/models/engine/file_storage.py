@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 """File Storage class
-for serialization into a JSON file and 
+for serialization into a JSON file and
 deserialization of JSON file
-into an instances. 
+into an instances.
 """
 
 import json
@@ -15,10 +15,9 @@ class FileStorage:
 
     """
         Private class attributes:
-    __file_path: string - path to the JSON file 
-    __objects: dictionary - empty but will store all objects by <class name>.id 
+    __file_path: string - path to the JSON file
+    __objects: dictionary - empty but will store all objects by <class name>.id
     """
-
 
     __file_path = "file.json"  # path to the JSON file
     __objects = {}  # dictionary to store all objects by <class name>.id
@@ -52,7 +51,7 @@ class FileStorage:
                 serialized_objects = json.load(file)
                 for key, obj_data in serialized_objects.items():
                     class_name, obj_id = key.split('.')
-                    # Dynamically create an instance of the class based on class_name
+                    # Dynamically create an instance of the class based
                     obj_class = globals()[class_name]
                     obj_instance = obj_class(**obj_data)
                     # Store the instance in __objects
