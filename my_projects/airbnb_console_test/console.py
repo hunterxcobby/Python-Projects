@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         print(f"Unrecognized command: {line}. Type 'help' for assistance.\n")
 
     def do_create(self, line):
-        """Creates a new instance of a specified class."""
+        """Creates a new instance of BaseModel, saves it (to the JSON file)"""
         args = line.split()
         if not args:
             print("** class name missing **")
@@ -63,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
 
 
     def do_destroy(self, line):
-        """Deletes an instance based on the class name and id."""
+        """Deletes an instance based on the class name and id (save the change into the JSON file)."""
         args = line.split()
         if not args:
             print("** class name missing **")
@@ -80,8 +80,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, line):
-        """Print all string representations of instances
-        Usage: all Basemodel or all
+        """ Deletes an instance based on the class name and id (save the change into the JSON file).
         """
         args = line.split()
         objects = storage.all()
@@ -94,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
             print([str(obj) for key, obj in objects.items() if key.startswith(args[0] + '.')])
 
     def do_update(self, line):
-        """Updates an instance by adding or updating attribute."""
+        """Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file)."""
         args = line.split()
         
         if not args:
