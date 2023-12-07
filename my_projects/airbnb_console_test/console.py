@@ -6,6 +6,7 @@ for building line-oriented command interpreters
 import cmd
 from models.base_model import BaseModel
 from models import storage
+import re
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
@@ -66,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         if not args:
             print("** class name missing **")
-        elif args[0] not in storage.all().keys():
+        elif args[0] not in ["BaseModel"]:
             print("** class doesn't exist **")
         elif len(args) < 2:
             print("** instance id missing **")
@@ -79,62 +80,84 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, line):
-        """Prints all string representation of all instances."""
+        """Print all string representations of instances
+        Usage: all Basemodel or all
+        """
         args = line.split()
-        obj_list = []
+        objects = storage.all()
+
         if not args:
-            for obj in storage.all().values():
-                obj_list.append(str(obj))
-        elif args[0] not in storage.all().keys():
+            print([str(obj) for obj in objects.values()])
+        elif args[0] not in ["BaseModel"]:
             print("** class doesn't exist **")
-            return
         else:
-            for key, obj in storage.all().items():
-                class_name = key.split('.')[0]
-                if class_name == args[0]:
-                    obj_list.append(str(obj))
-        print(obj_list)
+            print([str(obj) for key, obj in objects.items() if key.startswith(args[0] + '.')])
 
     def do_update(self, line):
-        """Updates an instance based on the class name and id."""
+        """Updates an instance by adding or updating attribute."""
         args = line.split()
+        
         if not args:
             print("** class name missing **")
-        elif args[0] not in storage.all().keys():
+            return
+
+        rex = r'^(\S+)(?:\s(\S+)(?:\s(\S+)(?:\s((?:"[^"]*")|(?:(\S)+)))?)?)?'
+        match = re.search(rex, line)
+        
+        if not match:
+            print("** class name missing **")
+            return
+
+        classname = match.group(1)
+        uid = match.group(2)
+        attribute = match.group(3)
+        value = match.group(4)
+
+        if classname not in ["BaseModel"]:
             print("** class doesn't exist **")
-        elif len(args) < 2:
+            return
+        elif uid is None:
             print("** instance id missing **")
-        elif "{}.{}".format(args[0], args[1]) not in storage.all():
-            print("** no instance found **")
-        elif len(args) < 3:
-            print("** attribute name missing **")
-        elif len(args) < 4:
-            print("** value missing **")
+            return
         else:
-            obj_key = "{}.{}".format(args[0], args[1])
-            obj = storage.all()[obj_key]
-            attr_name = args[2]
-            attr_value_str = args[3]
-
-            # Handling values in double quotes
-            if attr_value_str.startswith('"') and attr_value_str.endswith('"'):
-                attr_value = attr_value_str[1:-1]
-            else:
-                attr_value = attr_value_str
-
-            # Get the attribute type from the object's class
-            attr_type = type(getattr(obj, attr_name, None))
-
-            # Cast the attribute value to the correct type
-            try:
-                attr_value = attr_type(attr_value)
-            except ValueError:
-                print(f"Value {attr_value} cannot be casted to type {attr_type}")
+            key = "{}.{}".format(classname, uid)
+            if key not in storage.all():
+                print("** no instance found **")
                 return
+            elif not attribute:
+                print("** attribute name missing **")
+                return
+            elif not value:
+                print("** value missing **")
+                return
+            else:
+                obj = storage.all()[key]
+                cast = None
+                if not re.search('^".*"$', value):
+                    if '.' in value:
+                        cast = float
+                    else:
+                        cast = int
+                else:
+                    value = value.replace('"', '')
+                attributes = {k: type(v) for k, v in obj.to_dict().items()}
+                if attribute not in attributes:
+                    # Attribute doesn't exist, create it with the given value
+                    setattr(obj, attribute, value)
+                    storage.save()
+                elif cast:
+                    try:
+                        value = cast(value)
+                    except ValueError:
+                        print(f"Value {value} cannot be casted to type {cast}")
+                        return
+                    setattr(obj, attribute, value)
+                    storage.save()
+                else:
+                    # Update the attribute with the given value
+                    setattr(obj, attribute, value)
+                    storage.save()
 
-            # Update the attribute and save changes
-            setattr(obj, attr_name, attr_value)
-            storage.save()
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
