@@ -93,10 +93,15 @@ class HBNBCommand(cmd.Cmd):
         elif args[0] not in ["BaseModel"]:
             print("** class doesn't exist **")
         else:
-            print([str(obj) for key, obj in objects.items() if key.startswith(args[0] + '.')])
+            print([
+                str(obj) for key, obj in objects.items()
+                if key.startswith(args[0] + '.')
+            ])
 
     def do_update(self, line):
-        """Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file)."""
+        """Updates an instance based on the class name and id by adding'
+        or updating attribute
+        (save the change into the JSON file)."""
         args = line.split()
 
         if not args:
