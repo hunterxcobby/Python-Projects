@@ -8,6 +8,7 @@ from models.base_model import BaseModel
 from models import storage
 import re
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
@@ -37,7 +38,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        
+
         try:
             object = BaseModel()
             object.save()
@@ -46,7 +47,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, line):
-        """Prints the string representation of an instance based on the class name and id."""
+        """Prints the string representation of an instance
+        based on the class name and id."""
         args = line.split()
         if not args:
             print("** class name missing **")
@@ -61,9 +63,9 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print(storage.all()[key])
 
-
     def do_destroy(self, line):
-        """Deletes an instance based on the class name and id (save the change into the JSON file)."""
+        """Deletes an instance based on the class name and id
+        (save the change into the JSON file)."""
         args = line.split()
         if not args:
             print("** class name missing **")
@@ -80,7 +82,8 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_all(self, line):
-        """ Deletes an instance based on the class name and id (save the change into the JSON file).
+        """ Deletes an instance based on the class name and id
+        (save the change into the JSON file).
         """
         args = line.split()
         objects = storage.all()
@@ -95,14 +98,14 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, line):
         """Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file)."""
         args = line.split()
-        
+
         if not args:
             print("** class name missing **")
             return
 
         rex = r'^(\S+)(?:\s(\S+)(?:\s(\S+)(?:\s((?:"[^"]*")|(?:(\S)+)))?)?)?'
         match = re.search(rex, line)
-        
+
         if not match:
             print("** class name missing **")
             return
