@@ -29,5 +29,6 @@ class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
 if __name__ == '__main__': #command python idiom to check if script is main program
     command().cmdloop() #basically to capture the user in the loop.
 
+
 """So this is our console app working as it is supposed to
 but we have a problem when exiting, or when the user enters the wrong command"""
