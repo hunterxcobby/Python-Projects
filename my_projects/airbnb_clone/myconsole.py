@@ -8,16 +8,22 @@ We will use this to work on our CRUB operations"""
 class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
     """THis is a simple command line processor"""
 
-    def do_greet(self, line):
-        print("Hello world")
-    """the first parameter of a method is conventionally named self
-      and refers to the instance of the class. 
-      The line parameter is used to capture the user input provided after the command."""
+    def do_greet(self, person):
+        """greet [person]
+        Greet the name person"""
+        if person:
+            print("HI,", person)
+        else:
+            print("HI")
+
     
     def do_EOF(self, line): #sub class handle end of file marker
+        """Exit the console successfully"""
+        print()
         return True
     
-    def do_unknown(self, line): # when we reive an unknown command
+    def default(self, line): # when we reive an unknown command
+        """in case the user enters the wrong command"""
         print(f"Unknown command: {line}")
 
 if __name__ == '__main__': #command python idiom to check if script is main program
