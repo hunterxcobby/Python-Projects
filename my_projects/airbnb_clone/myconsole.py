@@ -9,13 +9,18 @@ class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
     """THis is a simple command line processor"""
 
     def do_greet(self, person):
-        """greet [person]
-        Greet the name person"""
+        # """greet [person]
+        # Greet the name person"""
         if person:
             print("HI,", person)
         else:
             print("HI")
 
+    def help_greet(self):
+        print('\n'.join([
+            'greet [person]',
+            'Greet the named person',
+        ]))
     
     def do_EOF(self, line): #sub class handle end of file marker
         """Exit the console successfully"""
