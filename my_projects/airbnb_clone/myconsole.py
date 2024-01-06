@@ -8,6 +8,8 @@ We will use this to work on our CRUB operations"""
 class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
     """THis is a simple command line processor"""
 
+    prompt = "(HBNB)"
+    
     def do_greet(self, person):
         # """greet [person]
         # Greet the name person"""
