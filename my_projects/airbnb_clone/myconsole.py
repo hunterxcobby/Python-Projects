@@ -16,6 +16,10 @@ class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
     
     def do_EOF(self, line): #sub class handle end of file marker
         return True
+    
+    def do_unknown(self, line): # when we reive an unknown command
+        print(f"Unknown command: {line}")
+
 if __name__ == '__main__': #command python idiom to check if script is main program
     command().cmdloop() #basically to capture the user in the loop.
 
