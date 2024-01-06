@@ -27,9 +27,24 @@ class command(cmd.Cmd): #a Cmd class inheriting from the cmd mod
         print()
         return True
     
+    def do_quit(self, line):
+        """Quit command to exit the program."""
+        return True
+    
+    def help_quit(self):
+        """Help message for the quit command."""
+        print("Quit command to exit the program\n")
+
+    
     def default(self, line): # when we reive an unknown command
         """in case the user enters the wrong command"""
         print(f"Unknown command: {line}")
+
+    def emptyline(self):
+        """Overwrite the empty line method"""
+        print("YOu entered an empty line")
+        return super().emptyline()
+    
 
 if __name__ == '__main__': #command python idiom to check if script is main program
     command().cmdloop() #basically to capture the user in the loop.
