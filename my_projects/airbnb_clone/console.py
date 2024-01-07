@@ -65,19 +65,27 @@ class UserManagement(cmd.Cmd):
             print("No user data file found. Starting with an empty user dictionary.")
 
 if __name__ == '__main__':
+    UserManagement.load_from_file()
     UserManagement().cmdloop()
 
 """
-Method Signature: def do_destroy(self, line): - This line defines the do_destroy method, associated with the "destroy" command.
+The `user_management.load_from_file()` call is done for a specific purpose: to initialize the `self.users` dictionary with any existing user data stored in a JSON file. Let me explain why this is important:
 
+1. **Persisting User Data:**
+   - When users are created, updated, or deleted using your `UserManagement` class, the changes are made to the `self.users` dictionary in memory.
+   - However, these changes are temporary while the program is running. If the program is closed or restarted, the in-memory data will be lost.
 
-User Input: if line in self.users: - Checks if the user input (line) corresponds to an existing user ID in the users dictionary.
+2. **Loading Data from a File:**
+   - By calling `load_from_file` at the beginning of your program, you're attempting to load any previously saved user data from a JSON file into the program's memory.
+   - This ensures that the `self.users` dictionary starts with the latest data that was saved in previous program sessions.
 
-Deleting User: del self.users[line] - If the user ID exists, it deletes the corresponding user from the users dictionary.
+3. **Persistence Across Sessions:**
+   - With the `load_from_file` method, your program becomes more persistent. It can remember and work with data from previous sessions rather than starting fresh each time it runs.
+   - This is useful in scenarios where you want your program to remember user data between different runs or sessions.
 
-User Feedback: print(f"User deleted - ID: {line}") - Prints a confirmation message indicating that the user with the specified ID has been deleted.
+4. **Consistency and Data Integrity:**
+   - If you only work with an in-memory dictionary and don't save/load data to/from a file, your program won't maintain consistency across multiple runs.
+   - By loading data from a file at the beginning, you ensure that the program starts with a consistent and updated state.
 
-User Not Found Handling: else: print(f"No user found with ID {line}") - If the user with the specified ID is not found, it prints an error message indicating that no user was found with that ID.
-
-In summary, the do_destroy method handles the "destroy" command, checks if the specified user ID exists, deletes the user if found, and provides feedback to the user. If the user ID is not found, it informs the user accordingly."""
+In summary, calling `user_management.load_from_file()` is a strategy to make your program more robust and persistent by loading any existing user data from a file into the program's memory, providing continuity and consistency across different runs of the program."""
 
