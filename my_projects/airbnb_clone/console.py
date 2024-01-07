@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import cmd
+import json
 
 class UserManagement(cmd.Cmd):
     """Simple CRUD command processor for managing users."""
@@ -46,6 +47,11 @@ class UserManagement(cmd.Cmd):
             print(f"User deleted - ID: {line}")
         else:
             print(f"No user found with ID {line}")
+
+    def save_to_file(self):
+        """Save user data to a JSON file."""
+        with open("user_data.json", "w") as json_file:
+            json.dump(self.users, json_file)
 
 if __name__ == '__main__':
     UserManagement().cmdloop()
