@@ -19,12 +19,14 @@ class UserManagement(cmd.Cmd):
             print(f"User created - ID: {digit}, Name: {name}")
         else:
             print("Invalid syntax. Use: create <digit> <name>")
+        self.save_to_file()
 
     def do_read(self, line):
         """Read and display all users."""
         print("List of Users:")
         for digit, name in self.users.items():
             print(f"ID: {digit}, Name: {name}")
+
     
     def do_update(self, line):
         """Update user's name. Syntax: update <digit> <new_name>"""
@@ -38,7 +40,7 @@ class UserManagement(cmd.Cmd):
                 print(f"No user found with ID {digit}")
         else:
             print("Invalid syntax. Use: update <digit> <new_name>")
-
+        self.save_to_file()
 
     def do_destroy(self, line):
         """Delete a user by ID. Syntax: destroy <digit>"""
@@ -47,6 +49,7 @@ class UserManagement(cmd.Cmd):
             print(f"User deleted - ID: {line}")
         else:
             print(f"No user found with ID {line}")
+        self.save_to_file()
 
     def save_to_file(self):
         """Save user data to a JSON file."""
