@@ -56,6 +56,14 @@ class UserManagement(cmd.Cmd):
         with open("user_data.json", "w") as json_file:
             json.dump(self.users, json_file)
 
+    def load_from_file(self):
+        """Load user data from a JSON file."""
+        try:
+            with open("user_data.json", "r") as json_file:
+                self.users = json.load(json_file)
+        except FileNotFoundError:
+            print("No user data file found. Starting with an empty user dictionary.")
+
 if __name__ == '__main__':
     UserManagement().cmdloop()
 
