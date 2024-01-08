@@ -83,11 +83,3 @@ Consistency with Built-In Functions:
 When using built-in functions like str or print, the __str__ method is automatically called if available. This ensures consistency in how instances are represented as strings across different parts of your code."""
 
 
-# Creating an instance of BaseModel
-base_model_instance = BaseModel()
-
-# Accessing attributes
-print(base_model_instance.id)
-print(base_model_instance.created_at)
-print(base_model_instance.updated_at)
-
