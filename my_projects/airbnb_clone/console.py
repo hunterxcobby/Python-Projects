@@ -4,9 +4,32 @@
 for building line-oriented command interpreters
 """
 import cmd
+from models.basemodel import BaseModel
+from models.user import User
 
 class MyConsole(cmd.Cmd):
     prompt = "(hbnb) "
+
+    CLASSES = {
+        'BaseModel': BaseModel,
+        'User': User
+    }
+
+    def do_create(self, line):
+        """Creates a new instance of BaseModel, saves it (to the JSON file)"""
+        args = line.split()
+        if not args:
+            print("** class name missing **")
+            return
+
+        try:
+            class_name = args[0]
+            object = self.CLASSES[class_name]()
+            object.save()
+            print(object.id)
+        except ImportError:
+            print("** class doesn't exist **")
+
 
     def emptyline(self):
         """Do nothing on an empty line"""
