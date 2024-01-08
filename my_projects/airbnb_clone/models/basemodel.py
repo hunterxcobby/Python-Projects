@@ -2,6 +2,7 @@
 
 import uuid
 from datetime import datetime
+import models
 
 class BaseModel:
     """BaseModel class for creating and managing instances.
@@ -15,6 +16,7 @@ class BaseModel:
     def save(self):
         """Update the updated_at attribute and save the instance."""
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Return a dictionary representation of the instance."""
