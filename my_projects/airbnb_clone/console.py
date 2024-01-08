@@ -30,6 +30,22 @@ class MyConsole(cmd.Cmd):
         except ImportError:
             print("** class doesn't exist **")
 
+    def do_show(self, line):
+        """Prints the string representation of an instance
+        based on the class name and id."""
+        args = line.split()
+        if not args:
+            print("** class name missing **")
+        elif args[0] not in self.CLASSES:
+            print("** class doesn't exist **")
+        elif len(args) < 2:
+            print("** instance id missing **")
+        else:
+            key = "{}.{}".format(args[0], args[1])
+            if key not in storage.all():
+                print("** no instance found **")
+            else:
+                print(storage.all()[key])    
 
     def emptyline(self):
         """Do nothing on an empty line"""
