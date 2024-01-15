@@ -68,4 +68,9 @@ for row in rows:
     print()
 
 
+#Close all cursors
+cur.close()
+# Close all databases
+db.close()
+
 
