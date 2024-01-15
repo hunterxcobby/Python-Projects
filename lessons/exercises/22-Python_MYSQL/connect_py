@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+
+import os
+import MySQLdb
+
+# assigning imported varibables
+MY_HOST = os.environ.get('MY_HOST')
+MY_USR = os.environ.get('MY_USR')
+MY_PSWD = os.environ.get('MY_PSWD')
+
+# connection to a database
+db = MySQLdb.connect(host=MY_HOST, user=MY_USR, passwd=MY_PSWD, db='friends')
+
+# getting a curse to navigate and manipulate query results
+cur = db.cursor()
+
+# cur.execute("CREATE TABLE songs(id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,title TEXT NOT NULL)")
+
+songs = ('Perfect', 'The Joker And The Queen', 'Galway Gal')
+
+# insert into the table
+# for song in songs:
+#     cur.execute("INSERT INTO songs (title) VALUES (%s)", (song,))
+#     print ("Auto Increment ID: %s" % cur.lastrowid)
+
+
+# numrows = cur.execute("SELECT * FROM songs")
+# print ("Selected %s rows" % numrows)
+# print ("Selected %s rows" % cur.rowcount)
+
+# print results in comman delimited format
+cur.execute("SELECT * FROM songs")
+rows = cur.fetchall()
+
+for row in rows:
+    for col in row:
+        print(col)
+        print()
+
+
+
