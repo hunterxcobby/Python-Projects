@@ -29,13 +29,43 @@ songs = ('Perfect', 'The Joker And The Queen', 'Galway Gal')
 # print ("Selected %s rows" % cur.rowcount)
 
 # print results in comman delimited format
-cur.execute("SELECT * FROM songs")
-rows = cur.fetchall()
+# cur.execute("SELECT * FROM songs")
+# rows = cur.fetchall()
 
+# for row in rows:
+#     for col in row:
+#         print(col)
+#         print()
+
+
+"""
+FETCH ONE AT A TIME
+"""
+cur.execute("SELECT * FROM songs WHERE id = 9")
+# result = cur.fetchone()
+
+# # Check if result is not None before printing
+# if result:
+#     print("Id: %s -- Title: %s" % result)
+# else:
+#     print("No results found.")
+
+
+""" RAISE EXCEPTIONS"""
+try:
+    cur.execute("SELECT * FROM songs")
+    rows = cur.fetchall()
+except MySQLdb.Error as e:
+    try:
+        print("MySQL Error [%d]: %s" % (e.args[0], e.args[1]))
+    except IndexError:
+        print("MySQL Error: %s" % str(e))
+
+# Print results in comma delimited format
 for row in rows:
     for col in row:
-        print(col)
-        print()
+        print("%s," % col)
+    print()
 
 
 
