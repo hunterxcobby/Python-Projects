@@ -1,0 +1,7 @@
+Persistent (or Keep-alive) connections in the context of HTTP refer to maintaining the TCP connection between the client (typically a web browser) and the server open for multiple requests and responses. This enhances network efficiency by reducing the overhead of opening and closing connections for each request.
+
+In HTTP/1.0, the default behavior is to close the connection after each response unless the client includes the "Connection: Keep-alive" header to negotiate for a persistent connection. However, in HTTP/1.1, persistent connections are the default, and the client doesn't need to include this header unless it wants to explicitly request the connection to be closed after the response.
+
+Persistent connections offer several benefits, including resource saving in opening and closing connections, the ability to pipeline requests for more efficient network usage, and faster responses due to avoiding the overhead of connection handshaking.
+
+In Apache HTTP server, configuration directives like KeepAlive, MaxKeepAliveRequests, and KeepAliveTimeout control the behavior of persistent connections, allowing administrators to enable or disable them and set parameters such as the maximum number of requests per connection and the timeout duration for idle connections.
