@@ -1,0 +1,3 @@
+The "Cache-Control: no-cache" header in an HTTP request indicates to the proxy server that it should fetch a fresh copy of the requested resource from the original server, bypassing any cached copies it may have. This header is part of the HTTP/1.1 protocol.
+
+In older HTTP/1.0 servers that do not understand the "Cache-Control" header, the "Pragma: no-cache" header is used instead to achieve the same effect. Including both headers in the request ensures compatibility with both HTTP/1.1 and HTTP/1.0 servers.
