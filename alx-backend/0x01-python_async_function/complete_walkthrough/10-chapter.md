@@ -1,0 +1,5 @@
+asyncio.create_task() schedules the execution of a coroutine object and returns a task object. It is particularly useful when you want to run a coroutine concurrently with other tasks. Remember to await the task within the main coroutine to ensure that it completes before the main coroutine finishes.
+
+asyncio.gather() is used to concurrently run multiple coroutines and wait for all of them to complete. It neatly combines multiple coroutines into a single future object and returns the results as a list. You can also use asyncio.as_completed() to get the results as coroutines finish, which allows for more flexibility in handling results as they become available.
+
+The await keyword has higher precedence than yield, meaning it is more tightly bound. This can affect the syntax when using yield from statements, as parentheses may be required in some cases where await statements do not need them.
